@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} Delete Page {% endblock %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+<p>Are you sure you want to delete "{{user}}" ?</p>
+
+<form method="POST" action="{% url 'delete' user.id %}">
+    {% csrf_token %}
+    <button onclick="window.location.href='/home'" class="btn btn-sm btn-danger">Cancel</button>
+
+    <input type="submit" name="Confirm" class="btn btn-sm btn-info">
+
+</form>
+{% endblock %} 

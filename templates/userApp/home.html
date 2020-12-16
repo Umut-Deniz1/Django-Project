@@ -1,14 +1,42 @@
 {% extends 'base.html' %}
+
 {% block title %} Home Page {% endblock %}
 
-{% load crispy_forms_tags %}
+
 {% block content %}
-<h1>Home Page </h1>
-<form action="/home/" method="POST">
-    {% csrf_token %}
+<div class="header">
+    <h1>User List </h1>
+</div>
+<div class="position-relative createButton">
+    <button onclick="window.location.href='index/'" class="btn btn-sm create-btn">Create User</button>
+</div>
+<div class="position-sticky table-div">
+    <table id="user-table">
+        <tr>
+            <th>ID</th>
+            <th>User Name</th>
+            <th>User Surname</th>
+            <th>User Identity</th>
+            <th>User PhoneNumber</th>
+            <th>User Delete</th>
+            <th>User Update</th>
+        </tr>
 
-    {{form|crispy}}
-    <button type="submit" class="btn btn-success">Send</button>
-</form>
+        {% for users in all_users %}
+        <tr>
+            <td>{{users.id}}</td>
+            <td>{{users.name}}</td>
+            <td>{{users.surname}}</td>
+            <td>{{users.tcIdentity}}</td>
+            <td>{{users.phoneNumber}}</td>
+            <td class="delete"><a class="btn btn-sm btn-danger" href="{% url 'delete' users.id %}">Delete</a></td>
+            <td class="update"><a class="btn btn-sm btn-info" href="{% url 'update' users.id %}">Update</a></td>
+        </tr>
+        {% endfor %}
 
-{% endblock %} 
+    </table>
+</div>
+
+
+
+{% endblock %}

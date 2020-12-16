@@ -18,6 +18,9 @@ from django.urls import path, include
 from register import views as v 
 
 urlpatterns = [
+    path('delete/<str:pk>', include('userApp.urls')),
+    path('update/<str:pk>', include('userApp.urls')),
+    path('index/', include('userApp.urls')),
     path('home/', include('userApp.urls')),
     path("register/", v.register, name="register"),
     path('', include('django.contrib.auth.urls')),
