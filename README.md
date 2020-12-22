@@ -7,3 +7,10 @@
  <br><br>
  ## Home Page
 ![](https://raw.githubusercontent.com/Umut-Deniz1/Django-Project/main/screenshots/WhatsApp%20Image%202020-12-21%20at%2021.38.21.jpeg)
+## Create Page
+![](https://raw.githubusercontent.com/Umut-Deniz1/Django-Project/main/screenshots/WhatsApp%20Image%202020-12-21%20at%2021.38.38.jpeg)
+## Login Page
+![](https://raw.githubusercontent.com/Umut-Deniz1/Django-Project/main/screenshots/WhatsApp%20Image%202020-12-21%20at%2021.49.17.jpeg)
+## Register Page
+![](https://raw.githubusercontent.com/Umut-Deniz1/Django-Project/main/screenshots/WhatsApp%20Image%202020-12-21%20at%2021.49.30.jpeg)
+
